@@ -1,0 +1,12 @@
+#include <stdio.h>
+int q[50],f=0,r=-1;
+int main(){
+    int n,x,i;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&x);
+        q[++r]=x;
+    }
+    for(i=f;i<=r;i++)
+        printf("%d ",q[i]);
+}
