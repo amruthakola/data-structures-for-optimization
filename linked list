@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct n{ int d; struct n*next; };
+
+int main(){
+    int n,i,x;
+    struct n *h=NULL,*t,*p;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        p=malloc(sizeof(struct n));
+        scanf("%d",&x);
+        p->d=x; p->next=NULL;
+        if(!h) h=t=p;
+        else t->next=p,t=p;
+    }
+    for(p=h;p;p=p->next) printf("%d ",p->d);
+}
